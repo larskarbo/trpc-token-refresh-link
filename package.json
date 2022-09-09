@@ -25,7 +25,7 @@
 		"prepare": "husky install",
 		"prepublishOnly": "pnpm build",
 		"test": "vitest",
-		"publish:patch": "pnpm run publish",
+		"publish:patch": "pnpm version patch && pnpm run publish",
 		"publish": "pnpm publish --access public"
 	},
 	"devDependencies": {
