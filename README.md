@@ -1,11 +1,21 @@
+
+
+<p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/10865165/189316451-8f80befb-6205-49b6-8eb9-733b7a4d4bc2.jpg" />
+</p>
+
 # tRPC Token Refresh Link
 
+
 | Seamlessly update your JWT access token token right before it expires.
+
+- ✅ Works with batching
+- ✅ Works with many requests at once. Will only do one token refresh request
 
 ## Installation
 
 ```
-npm install token-refresh-link
+npm install trpc-token-refresh-link
 ```
 
 ## Implementation
