@@ -11,19 +11,12 @@ npm install token-refresh-link
 ## Implementation
 
 ```ts
-import { tokenRefreshLink as tokenRefresh } from "trpc-token-refresh-link"
+import { tokenRefreshLink } from "trpc-token-refresh-link"
 
-links: [
-  ...
-  tokenRefreshLink({
-    tokenRefreshNeeded: () => boolean
-    fetchAccessToken: async () => void
-  }),
-  ...
-  httpLink({
-    url,
-  })
-],
+tokenRefreshLink({
+  tokenRefreshNeeded: () => boolean
+  fetchAccessToken: async () => void
+}),
 ```
 
 ## Example
@@ -77,20 +70,15 @@ links: [
 ...
 ```
 
-There are two ways to do token refreshing:
+## Philosophy
 
-- Do requests, wait for a 403 response from a server. If your receive a 403, refresh the token before retrying the request.
-- Calculate the expiration time locally and pre emptively refresh the token _before_ sending the request.
+This library calculates the expirationtime for the access token before sending it to the server.
 
-This link implements the second approach.
+This means we can refresh the token in advance, not requiring the roundtrip to the server for that.
 
-You need:
+This approach means that you need to have a way to read and decode the access token on the client. If you use a http-only access token (not available to js), this approach will not work.
 
-- Have a way to read and decode the access token on the client. If you use http secure etc, this will not work.
+## Credits and similar libraries
 
-Implementation:
-In your _app.tsx or whatever. Trpc, add the tokenRefreshLink.
-You will need to provide two functions:
-
-- shouldRefreshToken. Function that decides yes or no: should we initiate a refresh token?
-- refreshAccessToken: Function that actually fetches the token. Here you also need to store it somewhere and handle errors and custom logging out.
+- This library is heavily inspired from [newsiberian/apollo-link-token-refresh](https://github.com/newsiberian/apollo-link-token-refresh).
+- [axios-auth-refresh](https://github.com/Flyrell/axios-auth-refresh) - Axios interceptors that do a token refresh on 403 responses
