@@ -24,7 +24,8 @@
 		"lint:js": "eslint .",
 		"prepare": "husky install",
 		"prepublishOnly": "pnpm build",
-		"test": "vitest"
+		"test": "vitest",
+		"publish": "npm bump patch && pnpm publish --access public"
 	},
 	"devDependencies": {
 		"@sachinraja/eslint-config": "0.1.1",
