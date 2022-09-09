@@ -6,6 +6,9 @@
 		"semiColons": "asi"
 	},
 	"prettier": {
+		"semi": false,
+		"tabWidth": 2,
+		"trailingComma": "all",
 		"singleQuote": true,
 		"associations": [
 			"**/*.yaml",
