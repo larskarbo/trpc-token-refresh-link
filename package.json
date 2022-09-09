@@ -1,8 +1,8 @@
 {
-	"name": "token-refresh-link",
-	"version": "0.0.0",
+	"name": "trpc-token-refresh-link",
+	"version": "0.0.1",
 	"type": "module",
-	"description": "boilerplate for your next TypeScript library",
+	"description": "Token Refresh Link for tRPC",
 	"main": "dist/index.cjs",
 	"exports": {
 		"./package.json": "./package.json",
@@ -58,5 +58,9 @@
 		"clean": true
 	},
 	"packageManager": "pnpm@7.11.0",
-	"dependencies": {}
+	"dependencies": {
+		"@trpc/client": "^9.27.2",
+		"@trpc/server": "^9.27.2",
+		"p-queue": "^7.3.0"
+	}
 }
