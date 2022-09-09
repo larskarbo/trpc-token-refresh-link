@@ -13,7 +13,6 @@ npm install token-refresh-link
 ```ts
 import { tokenRefreshLink as tokenRefresh } from "trpc-token-refresh-link"
 
-...ts
 links: [
   ...
   tokenRefreshLink({
@@ -25,7 +24,6 @@ links: [
     url,
   })
 ],
-...
 ```
 
 ## Example
