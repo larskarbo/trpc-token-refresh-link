@@ -4,6 +4,10 @@
 	"type": "module",
 	"description": "Token Refresh Link for tRPC",
 	"main": "dist/index.cjs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/larskarbo/trpc-token-refresh-link"
+	},
 	"exports": {
 		"./package.json": "./package.json",
 		".": {
