@@ -10,13 +10,17 @@ npm install token-refresh-link
 
 ## Implementation
 
-```diff
-...
+```ts
+import { tokenRefreshLink as tokenRefresh } from "trpc-token-refresh-link"
+
+...ts
 links: [
-+ tokenRefreshLink({
-+   tokenRefreshNeeded: () => boolean
-+   fetchAccessToken: async () => void
-+ }),
+  ...
+  tokenRefreshLink({
+    tokenRefreshNeeded: () => boolean
+    fetchAccessToken: async () => void
+  }),
+  ...
   httpLink({
     url,
   })
