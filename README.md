@@ -2,15 +2,29 @@
 
 | Seamlessly update your JWT access token token right before it expires.
 
-Philosophy.
-
-Installation
+## Installation
 
 ```
 npm install token-refresh-link
 ```
 
-Implementation
+## Implementation
+
+```diff
+...
+links: [
++ tokenRefreshLink({
++   tokenRefreshNeeded: () => boolean
++   fetchAccessToken: async () => void
++ }),
+  httpLink({
+    url,
+  })
+],
+...
+```
+
+## Example
 
 ```ts
 ...
