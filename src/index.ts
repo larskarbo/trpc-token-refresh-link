@@ -9,7 +9,7 @@ export type TokenRefreshProperties = {
 	fetchAccessToken: () => Promise<void>
 }
 
-export const tokenRefresh = <AppRouter extends AnyRouter>({
+export const tokenRefreshLink = <AppRouter extends AnyRouter>({
 	tokenRefreshNeeded,
 	fetchAccessToken,
 }: TokenRefreshProperties): TRPCLink<AppRouter> =>

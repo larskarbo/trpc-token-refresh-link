@@ -25,7 +25,8 @@
 		"prepare": "husky install",
 		"prepublishOnly": "pnpm build",
 		"test": "vitest",
-		"publish:patch": "pnpm version patch && pnpm publish"
+		"publish:patch": "pnpm version patch && pnpm publish",
+		"publish:minor": "pnpm version minor && pnpm publish"
 	},
 	"devDependencies": {
 		"@sachinraja/eslint-config": "0.1.1",
