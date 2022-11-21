@@ -11,6 +11,7 @@
 
 - ✅ Works with batching
 - ✅ Works with many requests at once. Will only do one token refresh request
+- ✅ Works with TRPC v10
 
 
 ## Demo
