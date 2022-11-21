@@ -67,6 +67,7 @@
 	"dependencies": {
 		"@trpc/client": "^9.27.2",
 		"@trpc/server": "^9.27.2",
+		"date-fns": "^2.29.3",
 		"p-queue": "^7.3.0"
 	}
 }

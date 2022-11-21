@@ -5,6 +5,7 @@ specifiers:
   '@trpc/client': ^9.27.2
   '@trpc/server': ^9.27.2
   '@types/node': 18.7.14
+  date-fns: ^2.29.3
   dprint: 0.31.1
   eslint: 8.23.0
   husky: 8.0.1
@@ -19,6 +20,7 @@ specifiers:
 dependencies:
   '@trpc/client': 9.27.2_@trpc+server@9.27.2
   '@trpc/server': 9.27.2
+  date-fns: 2.29.3
   p-queue: 7.3.0
 
 devDependencies:
@@ -559,6 +561,11 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
+    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
