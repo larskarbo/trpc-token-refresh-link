@@ -1,6 +1,8 @@
 import { httpBatchLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
-import type { AppRouter } from '~/server/appRouter.js'
+import type { AppRouter } from '~/server/appRouter'
+import { logLink } from './logLink'
+import { tokenRefreshLink } from './tokenRefresh'
 
 function getBaseUrl() {
 	if (typeof window !== 'undefined') {
@@ -22,8 +24,13 @@ export const trpc = createTRPCNext<AppRouter>({
 	config() {
 		return {
 			links: [
+				logLink,
+				tokenRefreshLink,
 				httpBatchLink({
 					url: getBaseUrl() + '/api/trpc',
+					headers: () => ({
+						'x-access-token': typeof window != 'undefined' && localStorage.getItem('accessToken') || undefined,
+					}),
 				}),
 			],
 		}

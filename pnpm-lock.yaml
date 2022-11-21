@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sachinraja/eslint-config': 0.1.1
-  '@trpc/client': ^9.27.2
-  '@trpc/server': ^9.27.2
+  '@trpc/client': ^10.0.0
+  '@trpc/server': ^10.0.0
   '@types/node': 18.7.14
   date-fns: ^2.29.3
   dprint: 0.31.1
@@ -18,8 +18,8 @@ specifiers:
   vitest: 0.23.0
 
 dependencies:
-  '@trpc/client': 9.27.2_@trpc+server@9.27.2
-  '@trpc/server': 9.27.2
+  '@trpc/client': 10.0.0_@trpc+server@10.0.0
+  '@trpc/server': 10.0.0
   date-fns: 2.29.3
   p-queue: 7.3.0
 
@@ -58,13 +58,6 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
-
-  /@babel/runtime/7.19.0:
-    resolution: {integrity: sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.9
-    dev: false
 
   /@esbuild/linux-loong64/0.14.54:
     resolution: {integrity: sha512-bZBrLAIX1kpWelV0XemxBZllyRmM6vgFQQG2GdNb+r3Fkp0FOh1NJSvekXDs7jq70k4euu1cryLMfU+mTXlEpw==}
@@ -165,17 +158,16 @@ packages:
       - typescript
     dev: true
 
-  /@trpc/client/9.27.2_@trpc+server@9.27.2:
-    resolution: {integrity: sha512-rpsgJJMalOtki5VjcyheL0zdft23mDnoBHn5cJMZLf3ssymCZq2crbvCiUmCRU289lYHrqffaaZ+9PqCSsVKfg==}
+  /@trpc/client/10.0.0_@trpc+server@10.0.0:
+    resolution: {integrity: sha512-qxYbpFvokyL0SHSck/roBvG5/tORm+jTqzr+hnwyCghE4MQ0EGoyBImgdgUDAkTEjdarYTy1I3YplUw48QF4gQ==}
     peerDependencies:
-      '@trpc/server': 9.27.2
+      '@trpc/server': 10.0.0
     dependencies:
-      '@babel/runtime': 7.19.0
-      '@trpc/server': 9.27.2
+      '@trpc/server': 10.0.0
     dev: false
 
-  /@trpc/server/9.27.2:
-    resolution: {integrity: sha512-LcXCC004SYWVdHqjSZVpoKkcM0tJNwWtvmjmE2Jir36F0siY1CCbr7g2vz6LcOtA/q7Jj5G2/x1qMWzlPq/Bwg==}
+  /@trpc/server/10.0.0:
+    resolution: {integrity: sha512-PnSlKM3WtguEb1hryekuVlR00QOR8nbFKuZbuLbzfkLju+xOB+F3NplWW5YMVBywWdJKasX/inQDKur2SHyPfg==}
     dev: false
 
   /@types/chai-subset/1.3.3:
@@ -2167,10 +2159,6 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
-
-  /regenerator-runtime/0.13.9:
-    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
-    dev: false
 
   /regexp-tree/0.1.24:
     resolution: {integrity: sha512-s2aEVuLhvnVJW6s/iPgEGK6R+/xngd2jNQ+xy4bXNDKxZKJH6jpPHY6kVeVv1IeLCHgswRj+Kl3ELaDjG6V1iw==}

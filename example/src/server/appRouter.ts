@@ -1,6 +1,10 @@
 import { addSeconds } from 'date-fns'
 import { protectedProcedure, publicProcedure, router } from '~/server/trpc'
 
+export const createAccessToken = () => {
+	return addSeconds(new Date(), 10).toISOString()
+}
+
 export const appRouter = router({
 	publicTest: publicProcedure
 		.mutation(() => {
@@ -10,8 +14,8 @@ export const appRouter = router({
 		}),
 	login: publicProcedure
 		.mutation(() => {
-			const accessToken = addSeconds(new Date(), 10).toISOString()
-			const refreshToken = addSeconds(new Date(), 30).toISOString()
+			const accessToken = createAccessToken()
+			const refreshToken = '123abc'
 			return {
 				accessToken,
 				refreshToken,

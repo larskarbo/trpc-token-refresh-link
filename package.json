@@ -20,6 +20,7 @@
 		"dist"
 	],
 	"scripts": {
+		"dev": "tsup --watch",
 		"build": "tsup",
 		"format": "dprint fmt",
 		"lint": "run-p lint:*",
@@ -65,8 +66,8 @@
 	},
 	"packageManager": "pnpm@7.11.0",
 	"dependencies": {
-		"@trpc/client": "^9.27.2",
-		"@trpc/server": "^9.27.2",
+		"@trpc/client": "^10.0.0",
+		"@trpc/server": "^10.0.0",
 		"date-fns": "^2.29.3",
 		"p-queue": "^7.3.0"
 	}

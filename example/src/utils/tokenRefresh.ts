@@ -1,4 +1,4 @@
-import { tokenRefreshLink as tokenRefresh } from '../../../src/index'
+import { tokenRefreshLink as tokenRefresh } from '../../../dist/index.js'
 
 export const RENEW_MS_BEFORE_EXPIRATION = 5000
 
@@ -35,6 +35,7 @@ export const tokenRefreshLink = tokenRefresh({
 	tokenRefreshNeeded,
 	fetchAccessToken: async () => {
 		try {
+			console.log('fetching new access token 🌱')
 			const rsp = await fetch('/api/renew-token', {
 				method: 'POST',
 			})
