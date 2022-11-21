@@ -11,6 +11,15 @@
 
 - ✅ Works with batching
 - ✅ Works with many requests at once. Will only do one token refresh request
+- ✅ Works with TRPC v10
+
+
+## Demo
+
+This demo shows how the link preserves batching and only does one request to renew the token:
+
+![shot-A5GEaVUB](https://user-images.githubusercontent.com/10865165/203061560-209a02c6-cb9c-4201-84f7-827d61914e1f.gif)
+
 
 ## Installation
 
