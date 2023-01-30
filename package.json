@@ -1,6 +1,6 @@
 {
 	"name": "trpc-token-refresh-link",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"type": "module",
 	"description": "Token Refresh Link for tRPC",
 	"main": "dist/index.cjs",
