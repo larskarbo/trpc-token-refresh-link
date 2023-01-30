@@ -44,10 +44,16 @@ tokenRefreshLink({
 ...
 links: [
   tokenRefreshLink({
-    tokenRefreshNeeded: () => {
+    // access to the original trpc query operation object 
+    // is accessible on both methods
+    tokenRefreshNeeded: (query) => {
       // on every request, this function is called
 
       const token = ... // get the token from localstorage or cookies
+
+      if(query.path.includes(/* A route that does not need tokens */)){
+        return false
+      }
 
       if(/* There is no token */){
         return false
@@ -61,7 +67,7 @@ links: [
         return true
       }
     },
-    fetchAccessToken: async () => {
+    fetchAccessToken: async (query) => {
       // if true is returned from tokenRefreshNeeded, this function will be called
       
       // do your magic to fetch a refresh token here
@@ -78,6 +84,9 @@ links: [
         if (err instanceof Error && err.message.includes("401")) {
           clearAccessToken()
           location.reload()
+
+          // can also do more precise logs using the original object
+          console.log(`Token failed blocking the ${query.path} ${query.type}.`)
         }
       }
     },
