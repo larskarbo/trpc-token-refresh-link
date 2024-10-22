@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sachinraja/eslint-config': 0.1.1
-  '@trpc/client': 11.0.0-next-beta.294
-  '@trpc/server': 11.0.0-next-beta.294
+  '@trpc/client': ^11.0.0-next-beta.294
+  '@trpc/server': ^11.0.0-next-beta.294
   '@types/node': 18.7.14
   dprint: 0.31.1
   eslint: 8.23.0
