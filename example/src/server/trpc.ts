@@ -7,29 +7,33 @@
  * @see https://trpc.io/docs/v10/router
  * @see https://trpc.io/docs/v10/procedures
  */
-import { initTRPC, TRPCError } from '@trpc/server'
-import { Context } from './context'
+import { initTRPC, TRPCError } from "@trpc/server";
+import { Context } from "./context";
 
-const t = initTRPC.context<Context>().create()
+const t = initTRPC.context<Context>().create();
 
-const baseProcedure = t.procedure.use(t.middleware(async ({ ctx, next }) => {
-	// add delay to simulate a slow request
-	await new Promise(resolve => setTimeout(resolve, 500))
+const baseProcedure = t.procedure.use(
+	t.middleware(async ({ ctx, next }) => {
+		// add delay to simulate a slow request
+		await new Promise((resolve) => setTimeout(resolve, 500));
 
-	return next()
-}))
+		return next();
+	}),
+);
 
 /**
  * Unprotected procedure
  */
-export const publicProcedure = baseProcedure
+export const publicProcedure = baseProcedure;
 
-export const protectedProcedure = baseProcedure.use(t.middleware(async ({ ctx, next }) => {
-	if (!ctx.isAuthenticated) {
-		throw new TRPCError({ code: 'UNAUTHORIZED' })
-	}
-	return next()
-}))
+export const protectedProcedure = baseProcedure.use(
+	t.middleware(async ({ ctx, next }) => {
+		if (!ctx.isAuthenticated) {
+			throw new TRPCError({ code: "UNAUTHORIZED" });
+		}
+		return next();
+	}),
+);
 
-export const router = t.router
-export const middleware = t.middleware
+export const router = t.router;
+export const middleware = t.middleware;

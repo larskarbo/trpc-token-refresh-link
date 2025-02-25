@@ -1,4 +1,4 @@
 {
-  "parserOptions": { "project": "tsconfig.json" },
-  "extends": ["next"]
+	"parserOptions": { "project": "tsconfig.json" },
+	"extends": ["next"]
 }
