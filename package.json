@@ -1,6 +1,6 @@
 {
 	"name": "trpc-token-refresh-link",
-	"version": "0.5.1",
+	"version": "0.5.2",
 	"type": "module",
 	"description": "Token Refresh Link for tRPC",
 	"main": "dist/index.cjs",
@@ -47,7 +47,7 @@
 	},
 	"sideEffects": false,
 	"nano-staged": {
-		"*.{js,ts,md,json,yaml}": "biome format --write"
+		"*.{ts,tsx,js,jsx,json,md}": "biome format --write"
 	},
 	"tsup": {
 		"entry": ["src/index.ts"],
