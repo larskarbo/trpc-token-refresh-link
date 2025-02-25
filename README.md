@@ -9,7 +9,7 @@
 
 - ✅ Works with batching
 - ✅ Works with many requests at once. Will only do one token refresh request
-- ✅ Works with tRPC v10
+- ✅ Works with tRPC v10 and v11
 
 ## Demo
 
