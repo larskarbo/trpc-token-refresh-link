@@ -29,7 +29,9 @@
 		"lint:js": "eslint .",
 		"prepare": "husky install",
 		"prepublishOnly": "pnpm build",
-		"test": "vitest",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage",
 		"publish:patch": "pnpm version patch && pnpm publish",
 		"publish:minor": "pnpm version minor && pnpm publish"
 	},
