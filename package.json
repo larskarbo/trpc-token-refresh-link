@@ -1,6 +1,6 @@
 {
 	"name": "trpc-token-refresh-link",
-	"version": "0.5.2",
+	"version": "0.5.3",
 	"type": "module",
 	"description": "Token Refresh Link for tRPC",
 	"main": "dist/index.cjs",
@@ -16,7 +16,9 @@
 		}
 	},
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "tsup --watch",
 		"build": "tsup",
@@ -50,8 +52,13 @@
 		"*.{ts,tsx,js,jsx,json,md}": "biome format --write"
 	},
 	"tsup": {
-		"entry": ["src/index.ts"],
-		"format": ["esm", "cjs"],
+		"entry": [
+			"src/index.ts"
+		],
+		"format": [
+			"esm",
+			"cjs"
+		],
 		"dts": {
 			"resolve": true
 		},
@@ -64,7 +71,12 @@
 		"@trpc/server": "^10.0.0 || ^11.0.0-next-beta.294"
 	},
 	"pnpm": {
-		"ignoredBuiltDependencies": ["esbuild"],
-		"onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+		"ignoredBuiltDependencies": [
+			"esbuild"
+		],
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild"
+		]
 	}
 }
