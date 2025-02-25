@@ -66,9 +66,19 @@
 		"splitting": true,
 		"clean": true
 	},
-	"packageManager": "pnpm@7.11.0",
+	"packageManager": "pnpm@10.4.1",
 	"dependencies": {
 		"@trpc/client": "^10.0.0 || ^11.0.0-next-beta.294",
 		"@trpc/server": "^10.0.0 || ^11.0.0-next-beta.294"
+	},
+	"pnpm": {
+		"ignoredBuiltDependencies": [
+			"dprint",
+			"esbuild"
+		],
+		"onlyBuiltDependencies": [
+			"dprint",
+			"esbuild"
+		]
 	}
 }
